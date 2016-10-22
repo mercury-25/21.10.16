@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+<head>                                                     
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script type="text/javascript">   
+$(document).ready(function(){
+  
+   $("#but1").click(function(){
+      $("#par1").animate({fontSize:"3.3em"},1000);
+      $("#par1").animate({marginTop:"700px"},1000);
+      $("#par1").animate({marginLeft:"100px"},1000);
+      $("#par1").animate({fontSize:"1em"},1000);
+      $("#par1").animate({marginTop:"0px"},1000);
+      $("#par1").animate({marginLeft:"0px"},1000);
+	;
+   });
+   $("#but2").click(function(){
+      $("#par1").clearQueue();
+      $("#par1").stop();
+   });
+});                                           
+</script> 
+<body>
+<p><b>С помощью методов clearQueue и stop Вы можете останавливать выполнение анимации. Метод clearQueue позволяет очистить очередь анимации, а stop останавливает выполнение предыдущего шага.</b></p> 
+<p id="par1">JQvery.</p>
+<input id="but1" type="button" value="Выполнить анимацию" />
+<input id="but2" type="button" value="Остановить анимацию" />
+</body>
+</html>
